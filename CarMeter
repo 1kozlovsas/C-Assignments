@@ -1,0 +1,31 @@
+#include <stdio.h>
+
+int calculateCharges (int hoursparked, int charge);
+
+int main ();
+{
+int hours, total=0;
+puts("Want to check the charge for parking? Enter the number of hours you have parked(it will list your charge and total for the day: ");
+scanf("%d", &hoursparked);
+total= calculateCharges(hours, total);
+printf("The total is %d$", total);
+return 0;
+}
+
+
+int calculateCharges (int hoursparked, int charge)
+{
+int result;
+if (hoursparked < 3)
+{
+result = 2;
+return result;
+}else if (hoursparked > 24 || hoursparked < 0)
+{
+puts("The number cannot be higher than 24 or less than 0. Please enter a valid time.");
+scanf("%d", &hoursparked);
+}
+else 
+charge = 0.50 * (hoursparked-3) + 2;
+return charge;
+}
