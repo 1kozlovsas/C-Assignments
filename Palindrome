@@ -6,7 +6,7 @@ char pali[50]={0};
 printf("%s", "Please input a palindrome.\n");
 scanf("%s", pali);//tells program to place userinput into array called pali.
 
-int index, index2=0;//index for string inoutted, and index2 is for reverse string
+int index, index2=0;//index for string inputted, and index2 is for reverse string
 for(index=0;pali[index] != '\0'; index++){}//tells index to detect how many charatcers in user input
 for(index = index -1; index >= 0; index--){//sets index at end of character string(index -1, index automatically starts at last charatcer), then tells it to move left 1(index--) until it gets to 0(index >= 0) if i can.
 
