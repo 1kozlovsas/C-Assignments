@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int main(void)
+{
+char pali[50]={0};
+printf("%s", "Please input a palindrome.\n");
+scanf("%s", pali);//tells program to place userinput into array called pali.
+
+int index, index2=0;//index for string inoutted, and index2 is for reverse string
+for(index=0;pali[index] != '\0'; index++){}//tells index to detect how many charatcers in user input
+for(index = index -1; index >= 0; index--){//sets index at end of character string(index -1, index automatically starts at last charatcer), then tells it to move left 1(index--) until it gets to 0(index >= 0) if i can.
+
+if(index ==0 ) {//if index ie equal to index2(string is equal to reverse string), meaning if index gets to 0
+ printf("%s\n", "This is a palindrome.");//then output a string of text(%s) on a new line (\n) saying that this is a palindrome
+}
+if(pali[index] != pali[index2]){//if the index array does not equal the second index array
+printf("This is not a palindrome.\n");//output the string text stating that the input is not a palindrome
+break;//terminate program
+}
+index2++;//this is to increase inputted string, and index2 to move up one character 
+}
+return 0;
+}
