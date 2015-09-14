@@ -1,0 +1,24 @@
+#include <stdio.h>
+//Function Prototype ... function declaration
+// we need to put return type; name; paramter list for the new function prototype
+void sum (int x, int y );//int is return type, sum is name, int x and int y are arguments.
+
+int main ()
+{
+	int num1, num2, total=0;
+	
+printf("%s", "Enter 2 numbers: ");
+scanf("%d%d",&num1, &num2);		
+// function usage or a function call
+sum(num1, num2); // transfer of control
+
+printf("The sum is %d, the difference is %d, the product is %d, and the quotient is %d \n", total, subtotal, multotal, divtotal);
+return 0;
+}
+
+//function definition contains header and body.
+void sum (int x, int y) //this is the function header, the header up there is actually the function prototype.
+{
+int result = x + y;
+printf("The total is %d", result);
+}
