@@ -1,0 +1,50 @@
+#include<stdio.h>
+#include<string.h>
+#include<ctype.h>
+int main ( void )
+{
+
+	char textlines[2][80];
+	char *searchPtr;
+	char alphabet[26] = { 0 } ;
+	int counter =0;
+	int x; 
+        int y;
+puts("Enter 2 lines of text!");//getting input from user
+for (x = 0; x <= 2; x++) {
+gets( &textlines[x] [0]);
+}
+
+for (x=0; x<=2; x++)
+ {
+  for(y=0;textlines[x][y] != '\0'; y++)
+   {
+    textlines[x][y] = tolower(textlines[x][y]);//make all lines of text lowercase
+   }
+  }
+for (x=0; x<=25; x++)
+ {
+  for (y=0, counter=0; y<=2; y++)
+   {
+     searchPtr = &textlines[y][0];
+     
+     while (searchPtr = strchr( searchPtr, 'a' + x))//moving point to each character to compare
+      {
+       ++counter;
+       searchPtr++;
+      }
+    }
+   alphabet[x] = counter;
+}
+
+
+puts( "\nThe number of total occurrences of each character is:");//outputting results
+
+for(x=0; x<= 25; x++)
+ {
+  printf("%c:%2d\n", 'a' + x, alphabet[x]);
+ }
+return 0;
+}
+
+       
