@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+// macro to determine smallest of two values
+#define MINIMUM2( x, y ) ( ( x ) < ( y ) ? ( x ) : ( y ) )
+#define MINIMUM3( d, e)  ( ( d ) < ( e ) ? ( d ) : ( e ) )
+int main( void )
+{ 
+   int a; // first integer
+   int b; // second integer
+   int c; //third integer
+   int tempresult;//integer taken from minimum2 
+   
+   // prompt user and read two integers
+   printf( "%s", "Enter three integers: " );
+   scanf( "%d%d", &a, &b, &c );
+
+   // use macro MINIMUM to determine and display 
+   // smallest user entered integer
+   tempresult = MINIMUM2(a,b)
+   printf( "The minimum of %d and %d and %d is %d\n\n", a, b, c 
+      MINIMUM3( tempresult,c ) );
+
+   ;
+} // end main
